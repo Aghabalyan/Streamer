@@ -22,14 +22,7 @@ class SegmentCell: UITableViewCell {
             guard let steps = steps else { return }
             self.chapterElementTypeLabel.text = steps.name
             self.riseLabel.text = steps.rise
-            //chapterElementTypeImageView.image = UIImage(named: steps.stageIcon ?? "start_icon")
-            //chapterElementTypeImageView.tintColor = UIColor.white
             chapterElementTypeImageView.tintColor = UIColor(red:0.36, green:0.42, blue:0.48, alpha:1)
-            
-//            let hours = time / 3600
-//            let minutes = (time / 60) % 60
-//            let seconds = time % 60
-//            return String(format: "%0.2d:%0.2d:%0.2d", hours, minutes, seconds)
             
             let minutes = steps.interval! / 60
             let seconds = steps.interval! - minutes * 60
@@ -37,11 +30,9 @@ class SegmentCell: UITableViewCell {
         }
     }
 
-    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        sliderSegment.setThumbImage(UIImage(named: "thumb"), for: .normal)
+        //sliderSegment.setThumbImage(UIImage(named: "thumb"), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

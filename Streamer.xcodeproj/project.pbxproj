@@ -119,9 +119,9 @@
 		D6C2DEFE22096F9C00A0E0D6 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D6C2DF1F22097AE900A0E0D6 /* Cells */,
 				D6C2DF0022096FC100A0E0D6 /* Storyboards */,
 				D6C2DEFF22096FA900A0E0D6 /* View Controllers */,
+				D6C2DF1F22097AE900A0E0D6 /* Cells */,
 			);
 			path = Views;
 			sourceTree = "<group>";

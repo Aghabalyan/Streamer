@@ -27,7 +27,6 @@ class SegmnetsViewController: UIViewController {
     }
     
     // MARK: Setups
-    
     func setupNavBar() {
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
@@ -54,15 +53,10 @@ class SegmnetsViewController: UIViewController {
             }
         }
     }
-        
-
 }
 
 extension SegmnetsViewController: UITableViewDataSource {
-    
-    
     func numberOfSections(in tableView: UITableView) -> Int {
-        print(segments.count)
         return segments.count
     }
     
@@ -79,11 +73,15 @@ extension SegmnetsViewController: UITableViewDataSource {
 
 extension SegmnetsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
+        // TODO: - Header View
         let view = UIView()
         view.backgroundColor = UIColor.clear
         
         let label = UILabel()
         label.text =  segments[section].title
+        label.textColor = UIColor.white
+        label.frame = CGRect(x: 25, y: -5, width: 100, height: 35)
         
         let button = UIButton()
         button.setTitle("Start", for: .normal)
@@ -94,8 +92,6 @@ extension SegmnetsViewController: UITableViewDelegate {
         button.layer.borderWidth = 0.8
         button.layer.cornerRadius = 6
        
-        label.textColor = UIColor.white
-        label.frame = CGRect(x: 25, y: -5, width: 100, height: 35)
         view.addSubview(label)
         view.addSubview(button)
         return view
